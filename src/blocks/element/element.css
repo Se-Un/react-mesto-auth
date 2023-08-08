@@ -1,0 +1,17 @@
+.element {
+  width: 282px;
+  min-height: 361px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1279px) {
+  .element {
+    justify-self: center;
+  }
+}

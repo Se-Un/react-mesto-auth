@@ -1,0 +1,7 @@
+.element__button_active {
+  background-color: #ffffff;
+  background-image: url(../../../../images/logo/like-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

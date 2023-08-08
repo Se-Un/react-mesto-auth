@@ -1,0 +1,13 @@
+.popup__container_image {
+  max-width: 816px;
+  width: auto;
+  padding-top: 23px;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  .popup__container_image {
+   max-width: 240px;
+   padding-top: 28px;
+  }
+}
