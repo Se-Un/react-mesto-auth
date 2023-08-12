@@ -1,5 +1,6 @@
 // импорт 
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import api from '../utils/api';
 import Header from "./Header";
 import logo from '../images/logo/logo.svg';
@@ -121,16 +122,21 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <Header src={logo} alt="логотип отошёл на 5 минут" />
-        <Main 
-          onEditProfile={handleEditProfileClick}
-          onAddPlace={handleAddPlaceClick}
-          onEditAvatar={handleEditAvatarClick}
-          onPictureClick={handleCardClick}
-          onConfirmPopup={handleConfirmClick}
-          cards={cards}
-          onCardLike={handleCardLike}
-          onCardDelete={handleCardDelete}
-        /> 
+        
+        <Routes>
+          <Main 
+            onEditProfile={handleEditProfileClick}
+            onAddPlace={handleAddPlaceClick}
+            onEditAvatar={handleEditAvatarClick}
+            onPictureClick={handleCardClick}
+            onConfirmPopup={handleConfirmClick}
+            cards={cards}
+            onCardLike={handleCardLike}
+            onCardDelete={handleCardDelete}
+          /> 
+          <Route path="/sign-up" />
+          <Route path="/sign-in" />
+        </Routes>
         
         <Footer text="&#169; 2020 Mesto Russia" />
 
